@@ -1,3 +1,4 @@
+@use "../abstracts";
 *,
 ::after,
 ::before {
@@ -9,9 +10,11 @@ html {
 }
 
 body {
+    height: 50000px;
     font-family: "Gordita", sans-serif;
     font-size: 1rem;
     color: var(--text-color);
+    background-color: var(--body-bg-color);
 }
 
 a {
