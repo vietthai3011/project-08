@@ -1,4 +1,7 @@
+@use "../abstracts";
+
 $inner-padding: 30px;
+$main-column-width: 292px;
 
 .dropdown {
     position: absolute;
@@ -7,7 +10,7 @@ $inner-padding: 30px;
 
     width: min(1240px, 100%);
     padding-top: 54px;
-    // display: none;
+    display: none;
     &__inner {
         position: relative;
         padding: $inner-padding;
@@ -24,12 +27,24 @@ $inner-padding: 30px;
             filter: var(--dropdown-arrow-color);
         }
     }
+
+    //Custom scroll
+    & ::-webkit-scrollbar {
+        border-radius: 0;
+        width: 4px;
+    }
+
+    & ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(22, 24, 35, 0.1);
+    }
 }
 
 .top-menu {
+    position: relative;
     &__main {
         overflow-y: auto;
-        width: 292px;
+        width: $main-column-width;
         max-height: calc(100vh - 134px - $inner-padding * 2);
         border-right: 1px solid var(--top-menu-border-color);
     }
@@ -39,12 +54,20 @@ $inner-padding: 30px;
     display: flex;
     column-gap: 14px;
 
+    & + & {
+        margin-top: 14px;
+    }
+
     &__icon {
         position: relative;
 
         flex-shrink: 0;
         width: 36px;
         height: 36px;
+
+        @include abstracts.breakpoint(xl) {
+            display: none;
+        }
     }
 
     &__content {
@@ -54,7 +77,7 @@ $inner-padding: 30px;
     &__icon-1 {
         width: 30px;
         height: 30px;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     &__icon-2 {
@@ -63,7 +86,7 @@ $inner-padding: 30px;
         bottom: 0;
         width: 21px;
         height: 21px;
-        object-fit: cover;
+        object-fit: contain;
         filter: var(--menu-column-icon-color);
     }
 
@@ -81,16 +104,43 @@ $inner-padding: 30px;
         margin-top: 20px;
     }
 
+    &__item {
+        &--active .sub-menu {
+            display: grid;
+        }
+    }
+
+    &__item--active > &__Link,
+    &__item:hover > &__Link {
+        color: #0071dc;
+        font-weight: 600;
+    }
+
     &__Link {
         display: block;
         padding: 8px 0;
         font-size: 14px;
         line-height: 1.43;
         font-weight: 400;
+    }
+}
 
-        &:hover {
-            color: #0071dc;
-            font-weight: 500;
-        }
+.sub-menu {
+    position: absolute;
+    inset: 0 0 0 $main-column-width;
+
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 77px;
+
+    padding-left: $inner-padding;
+    overflow-y: auto;
+
+    &--not-main {
+        position: static;
+        inset: initial;
+        max-height: calc(100vh - 134px - $inner-padding * 2);
+        grid-template-columns: repeat(4, 1fr);
+        display: grid;
     }
 }

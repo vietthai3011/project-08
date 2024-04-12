@@ -1201,6 +1201,21 @@ select {
   filter: var(--icon-color);
 }
 
+::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(22, 24, 35, 0.2);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
 html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
@@ -1409,6 +1424,7 @@ html {
   left: 0;
   width: min(1240px, 100%);
   padding-top: 54px;
+  display: none;
 }
 .dropdown__inner {
   position: relative;
@@ -1425,7 +1441,18 @@ html {
   translate: -50% 0;
   filter: var(--dropdown-arrow-color);
 }
+.dropdown ::-webkit-scrollbar {
+  border-radius: 0;
+  width: 4px;
+}
+.dropdown ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(22, 24, 35, 0.1);
+}
 
+.top-menu {
+  position: relative;
+}
 .top-menu__main {
   overflow-y: auto;
   width: 292px;
@@ -1437,11 +1464,19 @@ html {
   display: flex;
   column-gap: 14px;
 }
+.menu-column + .menu-column {
+  margin-top: 14px;
+}
 .menu-column__icon {
   position: relative;
   flex-shrink: 0;
   width: 36px;
   height: 36px;
+}
+@media (max-width: 1199.8px) {
+  .menu-column__icon {
+    display: none;
+  }
 }
 .menu-column__content {
   flex: 1;
@@ -1449,7 +1484,7 @@ html {
 .menu-column__icon-1 {
   width: 30px;
   height: 30px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .menu-column__icon-2 {
   position: absolute;
@@ -1457,7 +1492,7 @@ html {
   bottom: 0;
   width: 21px;
   height: 21px;
-  object-fit: cover;
+  object-fit: contain;
   filter: var(--menu-column-icon-color);
 }
 .menu-column__heading {
@@ -1470,6 +1505,13 @@ html {
 .menu-column__list {
   margin-top: 20px;
 }
+.menu-column__item--active .sub-menu {
+  display: grid;
+}
+.menu-column__item--active > .menu-column__Link, .menu-column__item:hover > .menu-column__Link {
+  color: #0071dc;
+  font-weight: 600;
+}
 .menu-column__Link {
   display: block;
   padding: 8px 0;
@@ -1477,9 +1519,22 @@ html {
   line-height: 1.43;
   font-weight: 400;
 }
-.menu-column__Link:hover {
-  color: #0071dc;
-  font-weight: 500;
+
+.sub-menu {
+  position: absolute;
+  inset: 0 0 0 292px;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 77px;
+  padding-left: 30px;
+  overflow-y: auto;
+}
+.sub-menu--not-main {
+  position: static;
+  inset: initial;
+  max-height: calc(100vh - 134px - 60px);
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
 }
 
 /*# sourceMappingURL=main.css.map */
