@@ -13,7 +13,7 @@ $max-inner-height: calc(min(582px, (100vh - 134px)) - $inner-padding * 2);
     padding-top: 54px;
     display: none;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: static;
         padding-top: 0;
     }
@@ -34,7 +34,7 @@ $max-inner-height: calc(min(582px, (100vh - 134px)) - $inner-padding * 2);
             filter: var(--dropdown-arrow-color);
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             border-radius: 0;
             background-color: transparent;
             box-shadow: none;
@@ -66,7 +66,7 @@ $max-inner-height: calc(min(582px, (100vh - 134px)) - $inner-padding * 2);
         height: $max-inner-height;
         border-right: 1px solid var(--top-menu-border-color);
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             width: 100%;
             height: auto;
             border-right: none;
@@ -82,7 +82,7 @@ $max-inner-height: calc(min(582px, (100vh - 134px)) - $inner-padding * 2);
         margin-top: 22px;
     }
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         margin-top: 10px;
     }
 
@@ -93,10 +93,10 @@ $max-inner-height: calc(min(582px, (100vh - 134px)) - $inner-padding * 2);
         width: 36px;
         height: 36px;
 
-        @include abstracts.breakpoint(xl) {
+        @include abstracts.screen(xl) {
             display: none;
         }
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             display: block;
         }
     }
@@ -130,7 +130,7 @@ $max-inner-height: calc(min(582px, (100vh - 134px)) - $inner-padding * 2);
         font-size: 1.6rem;
         font-weight: 500;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-bottom: 26px;
         }
     }
@@ -138,7 +138,7 @@ $max-inner-height: calc(min(582px, (100vh - 134px)) - $inner-padding * 2);
     &__list {
         margin-top: 14px;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-top: 0;
         }
     }
@@ -175,7 +175,7 @@ $max-inner-height: calc(min(582px, (100vh - 134px)) - $inner-padding * 2);
     padding-left: $inner-padding;
     overflow-y: auto;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: static;
         grid-template-columns: 1fr;
         padding-left: 0;
@@ -188,7 +188,7 @@ $max-inner-height: calc(min(582px, (100vh - 134px)) - $inner-padding * 2);
         grid-template-columns: repeat(4, 1fr);
         display: grid;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             grid-template-columns: 1fr;
             height: auto;
         }
