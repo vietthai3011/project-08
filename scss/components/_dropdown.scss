@@ -2,6 +2,7 @@
 
 $inner-padding: 30px;
 $main-column-width: 292px;
+$max-inner-height: calc(min(582px, (100vh - 134px)) - $inner-padding * 2);
 
 .dropdown {
     position: absolute;
@@ -11,6 +12,12 @@ $main-column-width: 292px;
     width: min(1240px, 100%);
     padding-top: 54px;
     display: none;
+
+    @include abstracts.breakpoint(lg) {
+        position: static;
+        padding-top: 0;
+    }
+
     &__inner {
         position: relative;
         padding: $inner-padding;
@@ -26,9 +33,20 @@ $main-column-width: 292px;
             translate: -50% 0;
             filter: var(--dropdown-arrow-color);
         }
+
+        @include abstracts.breakpoint(lg) {
+            border-radius: 0;
+            background-color: transparent;
+            box-shadow: none;
+            overflow-y: auto;
+            padding: 0;
+            &::before {
+                content: none;
+            }
+        }
     }
 
-    //Custom scroll
+    //Custom scrollbar
     & ::-webkit-scrollbar {
         border-radius: 0;
         width: 4px;
@@ -45,8 +63,14 @@ $main-column-width: 292px;
     &__main {
         overflow-y: auto;
         width: $main-column-width;
-        max-height: calc(100vh - 134px - $inner-padding * 2);
+        height: $max-inner-height;
         border-right: 1px solid var(--top-menu-border-color);
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 }
 
@@ -55,7 +79,11 @@ $main-column-width: 292px;
     column-gap: 14px;
 
     & + & {
-        margin-top: 14px;
+        margin-top: 22px;
+    }
+
+    @include abstracts.breakpoint(lg) {
+        margin-top: 10px;
     }
 
     &__icon {
@@ -67,6 +95,9 @@ $main-column-width: 292px;
 
         @include abstracts.breakpoint(xl) {
             display: none;
+        }
+        @include abstracts.breakpoint(lg) {
+            display: block;
         }
     }
 
@@ -91,17 +122,25 @@ $main-column-width: 292px;
     }
 
     &__heading {
-        $heading-height: 36px;
+        $heading-height: 32px;
 
         height: $heading-height;
         line-height: $heading-height;
         color: var(--menu-column-heading-color);
         font-size: 1.6rem;
         font-weight: 500;
+
+        @include abstracts.breakpoint(lg) {
+            margin-bottom: 26px;
+        }
     }
 
     &__list {
-        margin-top: 20px;
+        margin-top: 14px;
+
+        @include abstracts.breakpoint(lg) {
+            margin-top: 0;
+        }
     }
 
     &__item {
@@ -118,7 +157,7 @@ $main-column-width: 292px;
 
     &__Link {
         display: block;
-        padding: 8px 0;
+        padding: 7px 0;
         font-size: 14px;
         line-height: 1.43;
         font-weight: 400;
@@ -136,11 +175,22 @@ $main-column-width: 292px;
     padding-left: $inner-padding;
     overflow-y: auto;
 
+    @include abstracts.breakpoint(lg) {
+        position: static;
+        grid-template-columns: 1fr;
+        padding-left: 0;
+    }
+
     &--not-main {
         position: static;
         inset: initial;
-        max-height: calc(100vh - 134px - $inner-padding * 2);
+        height: $max-inner-height;
         grid-template-columns: repeat(4, 1fr);
         display: grid;
+
+        @include abstracts.breakpoint(lg) {
+            grid-template-columns: 1fr;
+            height: auto;
+        }
     }
 }
