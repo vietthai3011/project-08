@@ -2274,10 +2274,11 @@ html ::-webkit-scrollbar-track {
   border-radius: 20px;
   filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
   transition: opacity 0.15s, visibility 0.15s;
+  overscroll-behavior: contain;
 }
 @media (max-width: 1199.8px) {
   .filter {
-    padding: 42px 20px 20px;
+    padding: 42px 0 20px;
   }
 }
 @media (max-width: 575.8px) {
@@ -2307,13 +2308,18 @@ html ::-webkit-scrollbar-track {
   line-height: 3.2rem; /* 145.455% */
   margin-bottom: 30px;
 }
+@media (max-width: 1199.8px) {
+  .filter__heading {
+    padding: 0 20px;
+  }
+}
 @media (max-width: 575.8px) {
   .filter__heading {
     margin-bottom: 20px;
   }
 }
 .filter__form-label {
-  display: inline-block;
+  display: block;
   color: var(--filter-form-color);
   font-size: 2.2rem;
   font-weight: 500;
@@ -2355,6 +2361,7 @@ html ::-webkit-scrollbar-track {
 }
 .filter__form-group {
   margin-top: var(--margin-top, 30px);
+  padding: 0 10px;
 }
 .filter__form-group--horizontal {
   display: grid;
@@ -2362,6 +2369,7 @@ html ::-webkit-scrollbar-track {
   column-gap: 30px;
 }
 .filter__form-input {
+  width: 100%;
   color: var(--filter-form-color);
   font-size: 1.4rem;
   font-weight: 500;
@@ -2374,6 +2382,11 @@ html ::-webkit-scrollbar-track {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.2rem; /* 146.667% */
+}
+@media (max-width: 575.8px) {
+  .filter__form-input {
+    font-size: 1.6rem;
+  }
 }
 .filter__form-separate {
   width: 1px;
@@ -2475,6 +2488,7 @@ html ::-webkit-scrollbar-track {
   height: 162px;
   background-color: #eee;
   margin: 0 30px;
+  flex-shrink: 0;
 }
 @media (max-width: 1199.8px) {
   .filter__separate {
@@ -2484,6 +2498,8 @@ html ::-webkit-scrollbar-track {
   }
 }
 .filter__footer {
+  position: relative;
+  background-color: var(--filter-form-bg);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -2491,7 +2507,16 @@ html ::-webkit-scrollbar-track {
 }
 @media (max-width: 1199.8px) {
   .filter__footer {
+    padding: 10px 20px 0;
     margin-top: 10px;
+  }
+}
+@media (max-width: 575.8px) {
+  .filter__footer {
+    position: sticky;
+    bottom: 0;
+    justify-content: space-around;
+    padding-bottom: 10px;
   }
 }
 .filter__cancel, .filter__submit {
@@ -2502,12 +2527,13 @@ html ::-webkit-scrollbar-track {
 }
 .filter__content {
   overflow-y: auto;
-  max-height: calc(100vh - 154px);
+  max-height: calc(100vh - 174px);
   overscroll-behavior: contain;
 }
 @media (max-width: 1199.8px) {
   .filter__content {
     flex-direction: column;
+    padding: 0 20px;
   }
 }
 
