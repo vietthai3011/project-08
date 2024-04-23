@@ -2,11 +2,6 @@
 .slideshow {
     z-index: -1;
     position: relative;
-    margin-top: 40px;
-
-    @include abstracts.screen(md) {
-        margin-top: 30px;
-    }
 
     &__inner {
         display: flex;

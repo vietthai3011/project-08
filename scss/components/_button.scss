@@ -1,0 +1,85 @@
+// Filter button
+
+.filter-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    background-color: var(--filter-btn-bg);
+    column-gap: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--filter-btn-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2rem; /* 142.857% */
+
+    &__icon {
+        filter: var(--filter-btn-icon-color);
+    }
+}
+
+.like-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--like-btn-shadow);
+
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--like-btn-bg);
+
+    &:not(&--like) &__icon--like {
+        display: none;
+    }
+
+    &--like &__icon {
+        display: none;
+    }
+
+    &__icon--like {
+        margin-top: 8px;
+    }
+}
+
+.btn {
+    user-select: none;
+    padding: 6px 12px;
+    background-color: #f8f8fb;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem; /* 142.857% */
+    border-radius: 6px;
+
+    & + & {
+        margin-left: 20px;
+    }
+
+    &--text {
+        color: #9e9da8;
+        background-color: transparent;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    &--primary {
+        background-color: #ffb700;
+    }
+
+    &--outline {
+        background-color: transparent;
+        border-radius: 10px;
+        border: 1px solid #d2d1d6;
+    }
+
+    &--rounded {
+        border-radius: 50%;
+    }
+
+    &:hover {
+        opacity: 0.9;
+        color: #fff;
+    }
+}

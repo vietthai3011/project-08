@@ -42,4 +42,36 @@ html {
     //Sidebar
     --sidebar-bg: #fff;
     --sidebar-shadow: rgba(200, 200, 200, 0.4);
+
+    //Category item
+    --cate-item-bg: #eee;
+
+    @include abstracts.screen(md) {
+        --cate-item-bg: #fff;
+    }
+
+    --cate-item-thum-bg: #fff;
+    --cate-item-hading-color: #1a162e;
+    --cate-item-title-color: #000;
+    --cate-item-title-desc: #1a162e;
+
+    // Filter btn
+    --filter-btn-color: #6c6c72;
+    --filter-btn-bg: #fff;
+
+    --like-btn-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
+    --like-btn-bg: #fff;
+    --like-btn-icon-color: brightness(0) saturate(100%) invert(5%) sepia(70%) saturate(1372%) hue-rotate(227deg)
+        brightness(101%) contrast(93%);
+
+    // Product cart
+    --product-cart-bg: #fff;
+    --product-cart-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+    --product-cart-body-color: #1a162e;
+
+    // Filter form
+    --filter-form-bg: #fff;
+    --filter-form-shadow: rgba(200, 200, 200, 0.5);
+    --filter-form-color: #1a162e;
+    --filter-form-tag-bg: #f8f8fb;
 }

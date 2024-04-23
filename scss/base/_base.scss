@@ -1,4 +1,5 @@
 @use "../abstracts";
+
 *,
 ::after,
 ::before {
@@ -26,6 +27,11 @@ button {
     border: none;
     background-color: transparent;
     outline: none;
+    padding: 0;
+}
+
+input {
+    background-color: transparent;
 }
 
 a,
@@ -37,6 +43,9 @@ select {
     font-family: inherit;
     color: inherit;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
 }
 
 .icon {
@@ -55,8 +64,35 @@ select {
     background-color: rgba(22, 24, 35, 0.2);
 }
 
+.home__container ::-webkit-scrollbar {
+    border-radius: 0;
+    width: 1px;
+}
+
+.filter__content ::-webkit-scrollbar {
+    border-radius: 0;
+    width: 1px;
+}
+
 ::-webkit-scrollbar-track {
     border-radius: 0;
     background-color: rgba(0, 0, 0, 0);
     margin-block: 5rem;
+}
+
+// Line break
+
+.line-break {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; // thay đổi line-max ở đây
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.container {
+    @include abstracts.screen(sm) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }

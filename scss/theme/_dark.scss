@@ -16,6 +16,11 @@ html.dark {
         margin-block: 0.5rem;
     }
 
+    .home__container ::-webkit-scrollbar {
+        border-radius: 0;
+        width: 0px;
+    }
+
     --text-color: #fff;
     --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1%) hue-rotate(154deg) brightness(103%)
         contrast(102%);
@@ -47,4 +52,32 @@ html.dark {
     //Sidebar
     --sidebar-bg: #292e39;
     --sidebar-shadow: rgba(23, 28, 40, 0.4);
+
+    //Category item
+    --cate-item-bg: #171c28;
+    --cate-item-thum-bg: #292e39;
+    --cate-item-hading-color: #fff;
+    --cate-item-title-color: #fff;
+    --cate-item-title-desc: #fff;
+
+    // Filter btn
+    --filter-btn-color: #fff;
+    --filter-btn-bg: #171c28;
+    --filter-btn-icon-color: brightness(0) saturate(100%) invert(100%) sepia(95%) saturate(21%) hue-rotate(338deg)
+        brightness(104%) contrast(107%);
+    --like-btn-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
+    --like-btn-bg: #292e39;
+
+    // Product cart
+    --product-cart-bg: #171c28;
+    --product-cart-shadow: 0px 20px 60px 10px rgba(0, 0, 0, 0.2);
+    --product-cart-body-color: #fff;
+
+    // Filter form
+    --filter-form-bg: #292e39;
+    --filter-form-shadow: rgba(0, 0, 0, 0.5);
+    --filter-form-color: #fff;
+    --filter-form-tag-bg: #171c28;
+    --filter-form-arrow-color: brightness(0) saturate(100%) invert(13%) sepia(5%) saturate(3292%) hue-rotate(184deg)
+        brightness(95%) contrast(85%);
 }
