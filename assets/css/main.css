@@ -2282,7 +2282,11 @@ html ::-webkit-scrollbar-track {
 }
 @media (max-width: 575.8px) {
   .filter {
-    width: 80vw;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    border-radius: 0;
   }
 }
 .filter__arrow {
@@ -2385,6 +2389,11 @@ html ::-webkit-scrollbar-track {
   border-radius: 6px;
   border: 1px solid #d2d1d6;
 }
+@media (max-width: 1199.8px) {
+  .filter__form-select-wrap {
+    width: 100%;
+  }
+}
 .filter__form-select {
   display: flex;
   align-items: center;
@@ -2443,12 +2452,7 @@ html ::-webkit-scrollbar-track {
   border-radius: 6px;
   border: 1px solid #d2d1d6;
 }
-@media (max-width: 991.8px) {
-  .filter__form-text-input {
-    width: auto;
-  }
-}
-@media (max-width: 575.8px) {
+@media (max-width: 1199.8px) {
   .filter__form-text-input {
     width: 100%;
   }
@@ -2457,6 +2461,11 @@ html ::-webkit-scrollbar-track {
   font-size: 1.4rem;
   padding: 8px 12px;
   width: 121px;
+}
+@media (max-width: 1199.8px) {
+  .filter__form-text-input--small {
+    width: 100%;
+  }
 }
 .filter__row {
   display: flex;
@@ -2482,7 +2491,7 @@ html ::-webkit-scrollbar-track {
 }
 @media (max-width: 1199.8px) {
   .filter__footer {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 .filter__cancel, .filter__submit {
@@ -2493,7 +2502,7 @@ html ::-webkit-scrollbar-track {
 }
 .filter__content {
   overflow-y: auto;
-  max-height: calc(100vh - 350px);
+  max-height: calc(100vh - 154px);
   overscroll-behavior: contain;
 }
 @media (max-width: 1199.8px) {

@@ -21,7 +21,11 @@
     }
 
     @include abstracts.screen(sm) {
-        width: 80vw;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        inset: 0;
+        border-radius: 0;
     }
 
     &__arrow {
@@ -141,6 +145,10 @@
             padding: 5px 14px;
             border-radius: 6px;
             border: 1px solid #d2d1d6;
+
+            @include abstracts.screen(xl) {
+                width: 100%;
+            }
         }
 
         &-select {
@@ -203,11 +211,7 @@
             border-radius: 6px;
             border: 1px solid #d2d1d6;
 
-            @include abstracts.screen(lg) {
-                width: auto;
-            }
-
-            @include abstracts.screen(sm) {
+            @include abstracts.screen(xl) {
                 width: 100%;
             }
 
@@ -215,6 +219,9 @@
                 font-size: 1.4rem;
                 padding: 8px 12px;
                 width: 121px;
+                @include abstracts.screen(xl) {
+                    width: 100%;
+                }
             }
         }
     }
@@ -243,7 +250,7 @@
         margin-top: 32px;
 
         @include abstracts.screen(xl) {
-            margin-top: 20px;
+            margin-top: 10px;
         }
     }
 
@@ -258,7 +265,7 @@
 
     &__content {
         overflow-y: auto;
-        max-height: calc(100vh - 350px);
+        max-height: calc(100vh - 154px);
         overscroll-behavior: contain;
 
         @include abstracts.screen(xl) {
