@@ -80,4 +80,12 @@ html.dark {
     --filter-form-tag-bg: #171c28;
     --filter-form-arrow-color: brightness(0) saturate(100%) invert(13%) sepia(5%) saturate(3292%) hue-rotate(184deg)
         brightness(95%) contrast(85%);
+
+    // Footer
+    --footer-border-color: #9e9da8;
+
+    // --------------------------------------------- Sign up -----------------------------------------------
+
+    --auth-content-bg: #292e39;
+    --auth-form-color: #b9babe;
 }

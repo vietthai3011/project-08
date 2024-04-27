@@ -1,0 +1,128 @@
+@use "../abstracts";
+
+.footer {
+    margin-top: 38px;
+    padding: 80px 0;
+    background-color: var(--cate-item-bg);
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1.5fr;
+        margin-top: 50px;
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 50px;
+        }
+
+        @include abstracts.screen(sm) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1.2fr 0.8fr 1fr 1.2fr;
+        }
+    }
+
+    &__logo-left {
+        margin-left: 0 !important;
+    }
+
+    &__col:last-child {
+        margin: auto 0;
+    }
+
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 3.4rem; /* 141.667% */
+    }
+
+    &__list {
+        margin-top: 28px;
+    }
+
+    &__item {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2.2rem; /* 146.667% */
+
+        & + & {
+            margin-top: 28px;
+        }
+
+        &:hover {
+            font-weight: 500;
+            color: blue;
+        }
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 16px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2.2rem; /* 146.667% */
+
+        &:last-of-type {
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        column-gap: 10px;
+        margin-bottom: 56px;
+
+        @include abstracts.screen(xxl) {
+            flex-direction: column;
+            row-gap: 30px;
+        }
+
+        &-input {
+            padding: 15px 20px;
+            border: 1px solid var(--footer-border-color);
+            border-radius: 8px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 2.2rem; /* 146.667% */
+
+            &::placeholder {
+                font-size: 1.5rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 2.2rem; /* 146.667% */
+            }
+
+            @include abstracts.screen(md) {
+                font-size: 1.6rem;
+            }
+        }
+
+        &-submit {
+            background-color: #ffb700 !important;
+            width: 142px;
+            height: 52px;
+        }
+    }
+
+    &__social {
+        display: flex;
+        column-gap: 10px;
+
+        &-icon {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        &-img {
+            width: 100%;
+        }
+
+        @include abstracts.screen(sm) {
+            justify-content: space-evenly;
+        }
+    }
+}

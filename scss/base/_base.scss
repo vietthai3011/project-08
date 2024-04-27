@@ -11,7 +11,6 @@ html {
 }
 
 body {
-    height: 5000px;
     font-family: "Gordita", sans-serif;
     font-size: 1rem;
     color: var(--text-color);
@@ -38,6 +37,7 @@ a,
 img,
 button,
 input,
+label,
 textarea,
 select {
     font-family: inherit;
