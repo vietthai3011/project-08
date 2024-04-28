@@ -1454,6 +1454,7 @@ html.dark {
   --footer-border-color: #9e9da8;
   --auth-content-bg: #292e39;
   --auth-form-color: #b9babe;
+  --auth-intro-bg: #171c28;
 }
 html.dark ::-webkit-scrollbar {
   border-radius: 0;
@@ -1514,6 +1515,7 @@ html {
   --auth-content-bg: #fff;
   --auth-form-color: #9e9da8;
   --auth-form-border-color: #d2d1d6;
+  --auth-intro-bg: #fafafd;
 }
 html ::-webkit-scrollbar {
   border-radius: 0;
@@ -1537,6 +1539,11 @@ html ::-webkit-scrollbar-track {
 @media (max-width: 767.8px) {
   html {
     --cate-item-bg: #fff;
+  }
+}
+@media (max-width: 767.8px) {
+  html {
+    background-color: #fff;
   }
 }
 
@@ -1852,8 +1859,12 @@ html ::-webkit-scrollbar-track {
   line-height: 2.2rem; /* 146.667% */
 }
 .footer__title:last-of-type {
-  text-align: center;
   margin-bottom: 25px;
+}
+@media (max-width: 575.8px) {
+  .footer__title:last-of-type {
+    text-align: center;
+  }
 }
 .footer__form {
   display: flex;
@@ -2862,6 +2873,7 @@ html ::-webkit-scrollbar-track {
   justify-content: center;
   flex-direction: column;
   row-gap: 50px;
+  background-color: var(--auth-intro-bg);
   position: relative;
 }
 .auth__intro-logo, .auth__intro-next {
@@ -2914,6 +2926,12 @@ html ::-webkit-scrollbar-track {
   margin: 50px auto;
   width: min(460px, 100%);
 }
+@media (max-width: 767.8px) {
+  .auth__content-inner {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+}
 .auth__heading {
   margin-top: 50px;
   font-size: 3rem;
@@ -2922,13 +2940,14 @@ html ::-webkit-scrollbar-track {
 }
 @media (max-width: 767.8px) {
   .auth__heading {
+    margin-top: 30px;
     font-size: 2.2rem;
     line-height: 3.2rem; /* 145.455% */
   }
 }
 .auth__desc {
   color: var(--auth-form-color);
-  padding: 0 30px;
+  padding: 0 20px;
   margin-top: 10px;
   font-size: 1.5rem;
   font-weight: 500;
@@ -2974,8 +2993,18 @@ html ::-webkit-scrollbar-track {
   align-items: flex-start;
   margin-top: 30px;
 }
+@media (max-width: 767.8px) {
+  .auth__btn + .auth__btn {
+    margin-top: 20px;
+  }
+}
 .auth__btn-group {
   margin-top: 50px !important;
+}
+@media (max-width: 767.8px) {
+  .auth__btn-group {
+    margin-top: 30px !important;
+  }
 }
 .auth__text {
   color: var(--auth-form-color);
@@ -2987,6 +3016,7 @@ html ::-webkit-scrollbar-track {
 @media (max-width: 767.8px) {
   .auth__text {
     font-size: 1.6rem;
+    margin-top: 40px;
   }
 }
 .auth__text .auth__link {

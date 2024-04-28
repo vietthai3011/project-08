@@ -62,7 +62,9 @@
         line-height: 2.2rem; /* 146.667% */
 
         &:last-of-type {
-            text-align: center;
+            @include abstracts.screen(sm) {
+                text-align: center;
+            }
 
             margin-bottom: 25px;
         }

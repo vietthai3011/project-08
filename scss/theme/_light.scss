@@ -83,4 +83,9 @@ html {
     --auth-content-bg: #fff;
     --auth-form-color: #9e9da8;
     --auth-form-border-color: #d2d1d6;
+    --auth-intro-bg: #fafafd;
+
+    @include abstracts.screen(md) {
+        background-color: #fff;
+    }
 }
