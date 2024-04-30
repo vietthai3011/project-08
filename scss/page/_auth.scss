@@ -39,6 +39,7 @@
         flex-direction: column;
         row-gap: 50px;
         background-color: var(--auth-intro-bg);
+        color: var(--auth-form-color);
 
         position: relative;
 
@@ -54,6 +55,7 @@
         }
 
         &-img {
+            width: var(--width);
             max-width: 100%;
         }
 
@@ -111,10 +113,14 @@
         line-height: 4.4rem; /* 146.667% */
 
         @include abstracts.screen(md) {
-            margin-top: 30px;
+            margin-top: 40px;
             font-size: 2.2rem;
             line-height: 3.2rem; /* 145.455% */
         }
+    }
+
+    &__message {
+        margin-top: 30px;
     }
 
     &__desc {
@@ -136,6 +142,10 @@
     &__form {
         width: 100%;
         margin-top: 60px;
+
+        &-forgot {
+            margin-top: 30px;
+        }
 
         @include abstracts.screen(md) {
             margin-top: 30px;
@@ -161,12 +171,17 @@
         width: 100%;
 
         & + & {
+            color: var(--auth-form-color);
             column-gap: 10px;
             align-items: flex-start;
             margin-top: 30px;
 
             @include abstracts.screen(md) {
                 margin-top: 20px;
+            }
+
+            .btn-icon {
+                filter: var(--auth-icon-google);
             }
         }
 
