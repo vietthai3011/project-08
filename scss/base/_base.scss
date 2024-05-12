@@ -12,7 +12,7 @@ html {
 
 body {
     font-family: "Gordita", sans-serif;
-    font-size: 1rem;
+    font-size: 1.6rem;
     color: var(--text-color);
     background-color: var(--body-bg-color);
 }
@@ -29,9 +29,16 @@ button {
     padding: 0;
 }
 
-input {
+input,
+textarea {
     background-color: transparent;
 }
+
+// input {
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     appearance: none;
+// }
 
 a,
 img,
@@ -66,7 +73,7 @@ select {
 
 .home__container ::-webkit-scrollbar {
     border-radius: 0;
-    width: 1px;
+    width: 2px;
 }
 
 .filter__content ::-webkit-scrollbar {
@@ -95,4 +102,18 @@ select {
         padding-left: 20px;
         padding-right: 20px;
     }
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: 600;
+}
+
+.arrow-up {
+    filter: var(--arrow-filter);
 }

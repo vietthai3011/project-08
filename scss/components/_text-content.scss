@@ -1,0 +1,115 @@
+@use "../abstracts";
+
+.text-content {
+    margin-bottom: 30px;
+
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    block-quote,
+    img,
+    figure,
+    ul,
+    ol {
+        margin: 20px 0;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+    }
+
+    h5 {
+        font-size: 1.4rem;
+    }
+
+    h6 {
+        font-size: 1.2rem;
+    }
+
+    table {
+        max-width: 100%;
+    }
+
+    table,
+    tr,
+    td {
+        border: 2px solid #ccc;
+    }
+    td {
+        padding: 10px;
+        text-align: center;
+
+        @include abstracts.screen(md) {
+            padding: 5px;
+        }
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+
+        & + em {
+            display: block;
+            font-style: italic;
+            text-align: center;
+        }
+    }
+
+    a {
+        color: rgb(0, 8, 252);
+        text-decoration: underline;
+    }
+
+    blockquote {
+        margin: 20px 0;
+        padding: 20px;
+        border-left: 5px solid rgb(0, 8, 252);
+        font-style: italic;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        background-color: var(--content-text-blockquote-bg);
+        border-radius: 0 6px 6px 0;
+
+        & p {
+            margin: 0;
+        }
+    }
+
+    hr {
+        border: none;
+        height: 2px;
+        width: 100%;
+        background-color: #ccc;
+        border-radius: 50%;
+        margin: 50px 0;
+    }
+}

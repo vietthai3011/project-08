@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,11 +57,23 @@
                     <form action="./index-logined.html" class="form auth__form">
                         <div class="form__group">
                             <div class="form__text-input">
-                                <input type="email" name="" id="" class="form__input" placeholder="Email" required />
+                                <input
+                                    type="email"
+                                    name=""
+                                    id=""
+                                    class="form__input"
+                                    placeholder="Email"
+                                    required
+                                    value="admin@gmail.com"
+                                />
                                 <img src="./assets/icon/Message.svg" alt="" class="form__input-icon" />
-                                <img src="./assets/icon/Form-error.svg" alt="" class="form__input-icon--error" />
+                                <img
+                                    src="./assets/icon/Form-error.svg"
+                                    alt=""
+                                    class="form__input-icon--error"
+                                />
                             </div>
-                            <p class="form__error">Email chưa đúng định dạng</p>
+                            <p class="form__error">Email is not in correct format</p>
                         </div>
 
                         <div class="form__group">
@@ -74,11 +86,16 @@
                                     placeholder="Password"
                                     required
                                     minlength="6"
+                                    value="123456"
                                 />
                                 <img src="./assets/icon/Password.svg" alt="" class="form__input-icon" />
-                                <img src="./assets/icon/Form-error.svg" alt="" class="form__input-icon--error" />
+                                <img
+                                    src="./assets/icon/Form-error.svg"
+                                    alt=""
+                                    class="form__input-icon--error"
+                                />
                             </div>
-                            <p class="form__error">Mật khẩu ít nhất 6 kí tự</p>
+                            <p class="form__error">Password at least 6 characters</p>
                         </div>
 
                         <div class="form__group">
@@ -91,11 +108,16 @@
                                     placeholder="Confirm Password"
                                     required
                                     minlength="6"
+                                    value="123456"
                                 />
                                 <img src="./assets/icon/Password.svg" alt="" class="form__input-icon" />
-                                <img src="./assets/icon/Form-error.svg" alt="" class="form__input-icon--error" />
+                                <img
+                                    src="./assets/icon/Form-error.svg"
+                                    alt=""
+                                    class="form__input-icon--error"
+                                />
                             </div>
-                            <p class="form__error">Mật khẩu nhập lại chưa chính xác</p>
+                            <p class="form__error">Re-entered password is not correct</p>
                         </div>
 
                         <div class="form__group form__group-inline">
@@ -104,7 +126,9 @@
                                 <span class="form__checkbox-label">Set as default card</span>
                             </label>
 
-                            <a href="./reset-password.html" class="auth__link form__pull-right">Forgot Password</a>
+                            <a href="./reset-password.html" class="auth__link form__pull-right"
+                                >Forgot Password</a
+                            >
                         </div>
 
                         <div class="form__group auth__btn-group">

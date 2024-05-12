@@ -3,7 +3,7 @@
 .footer {
     margin-top: 38px;
     padding: 80px 0;
-    background-color: var(--cate-item-bg);
+    background-color: var(--footer-bg);
     &__row {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1.5fr;
@@ -104,6 +104,8 @@
             background-color: #ffb700 !important;
             width: 142px;
             height: 52px;
+
+            border-radius: 6px;
         }
     }
 

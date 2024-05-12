@@ -1,0 +1,40 @@
+@use "../abstracts";
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px 20px;
+
+    background-color: var(--breadcrumbs-bg);
+    padding: 20px;
+    border-radius: 10px;
+
+    @include abstracts.screen(md) {
+        column-gap: 16px;
+        border-radius: 20px;
+    }
+
+    &__item {
+        color: #9e9da8;
+        font-weight: 500;
+        line-height: 2.4rem; /* 150% */
+
+        &:last-of-type {
+            color: var(--breadcrumbs-item-last-color);
+        }
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            line-height: 2rem; /* 142.857% */
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+
+        white-space: nowrap;
+        column-gap: 8px;
+    }
+}

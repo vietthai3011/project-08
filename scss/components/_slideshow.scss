@@ -1,6 +1,6 @@
 @use "../abstracts";
 .slideshow {
-    z-index: -1;
+    z-index: 1;
     position: relative;
 
     &__inner {

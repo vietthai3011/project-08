@@ -35,7 +35,8 @@
         width: 45px;
         top: -18px;
         right: 24px;
-        filter: var(--filter-form-arrow-color);
+
+        filter: var(--arrow-filter);
     }
 
     &.hide {
@@ -60,22 +61,6 @@
     }
 
     &__form {
-        &-label {
-            display: block;
-
-            color: var(--filter-form-color);
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 3.2rem; /* 145.455% */
-
-            &--small {
-                margin-bottom: 10px;
-                font-size: 1.4rem;
-                font-weight: 500;
-                line-height: 2rem; /* 142.857% */
-            }
-        }
-
         &-slider {
             position: relative;
             width: 272px;
@@ -111,7 +96,6 @@
 
         &-group {
             margin-top: var(--margin-top, 30px);
-            padding: 0 10px;
         }
 
         &-group--horizontal {
@@ -147,71 +131,6 @@
             height: 35px;
             margin: 0 14px;
             background-color: #d2d1d6;
-        }
-
-        &-select-wrap {
-            display: flex;
-            align-items: center;
-
-            width: 272px;
-            padding: 5px 14px;
-            border-radius: 6px;
-            border: 1px solid #d2d1d6;
-
-            @include abstracts.screen(xl) {
-                width: 100%;
-            }
-        }
-
-        &-select {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            min-width: var(--width, 80px);
-
-            color: var(--filter-form-color);
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 2rem; /* 142.857% */
-            cursor: pointer;
-
-            @include abstracts.screen(sm) {
-                font-size: 1.5rem;
-            }
-
-            @include abstracts.screen(xl) {
-                flex: 1;
-            }
-        }
-
-        &-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px 20px;
-
-            @include abstracts.screen(lg) {
-                gap: 9px 15px;
-            }
-        }
-
-        &-tag {
-            padding: 6px 12px;
-            color: #9e9da8;
-            border-radius: 6px;
-            border: none;
-            background-color: var(--filter-form-tag-bg);
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 2rem; /* 142.857% */
-
-            @include abstracts.screen(sm) {
-                font-weight: 400;
-            }
-
-            &:hover {
-                color: #fff;
-            }
         }
 
         &-text-input {
@@ -285,6 +204,7 @@
 
     &__submit {
         font-size: 1.5rem;
+        border-radius: 6px;
     }
 
     &__content {

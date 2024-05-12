@@ -8,6 +8,7 @@ $max-inner-height: calc(min(582px, (100vh - 134px)) - $inner-padding * 2);
     position: absolute;
     right: 0;
     left: 0;
+    z-index: 2;
 
     width: min(1240px, 100%);
     padding-top: 54px;

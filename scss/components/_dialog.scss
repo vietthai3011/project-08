@@ -1,0 +1,111 @@
+@use "../abstracts";
+
+.dialog {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: opacity 0.3s, visibility 0.3s;
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__overlay {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+
+        max-width: calc(100% - 40px);
+
+        padding: 30px;
+        background-color: var(--dialog-content-bg);
+        border-radius: 16px;
+
+        box-shadow: var(--dialog-content-shadow);
+
+        @include abstracts.screen(sm) {
+            padding: 16px;
+        }
+    }
+
+    &__title {
+        font-size: 3.2rem;
+        font-weight: 500;
+        line-height: 2rem; /* 142.857% */
+
+        @include abstracts.screen(sm) {
+            font-size: 2.6rem;
+        }
+    }
+
+    &__text {
+        margin-top: 40px;
+
+        font-size: 2.2rem;
+        line-height: 2.4rem; /* 142.857% */
+
+        @include abstracts.screen(sm) {
+            margin-top: 30px;
+
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
+
+        & + & {
+            font-size: 1.8rem;
+
+            margin-top: 5px;
+            margin-bottom: 40px;
+
+            @include abstracts.screen(sm) {
+                margin-top: 0;
+                margin-bottom: 30px;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        column-gap: 20px;
+
+        white-space: nowrap;
+
+        @include abstracts.screen(sm) {
+            column-gap: 10px;
+        }
+
+        &--cancel,
+        &--confirm {
+            padding: 12px 24px;
+            border-radius: 6px;
+
+            font-size: 2.2rem;
+            line-height: 2.4rem; /* 142.857% */
+
+            @include abstracts.screen(sm) {
+                padding: 8px 12px;
+
+                font-size: 1.8rem;
+            }
+
+            @include abstracts.screen(sm) {
+                flex: 1;
+            }
+        }
+    }
+}

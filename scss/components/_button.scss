@@ -47,13 +47,15 @@
 .btn {
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+
     user-select: none;
-    padding: 6px 12px;
     background-color: #f8f8fb;
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 2rem; /* 142.857% */
-    border-radius: 6px;
 
     & + & {
         &:not(.btn--no-margin) {
@@ -84,5 +86,9 @@
 
     &:hover {
         opacity: 0.9;
+    }
+
+    &--round {
+        border-radius: 50px;
     }
 }
