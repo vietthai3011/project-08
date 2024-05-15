@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Shipping | Grocery mart</title>
 
-        <!-- Favicon -->
+        <!-- * Favicon -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="./ssets/favicon/favicon-16x16.png" />
@@ -13,13 +13,13 @@
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
 
-        <!-- Font -->
+        <!-- * Font -->
         <link rel="stylesheet" href="./assets/font/stylesheet.css" />
 
-        <!-- Style -->
+        <!-- * Style -->
         <link rel="stylesheet" href="./assets/css/main.css" />
 
-        <!-- Scripts -->
+        <!-- * Scripts -->
         <script src="./assets/js/scripts.js"></script>
 
         <style>
@@ -95,7 +95,10 @@
                                                 Where should we deliver your order?
                                             </p>
                                         </div>
-                                        <button class="btn btn--primary btn--round user-address__btn">
+                                        <button
+                                            class="btn btn--primary btn--round user-address__btn js-toggle"
+                                            toggle-target="#add-new-address"
+                                        >
                                             <img src="./assets/icon/plus.svg" alt="" />
                                             Add a new address
                                         </button>
@@ -107,7 +110,8 @@
                                             <p class="user-address__message d-inline-block">
                                                 Not address yet.
                                             </p>
-                                            <a href="#!" class="user-address__link">Add a new address</a>
+                                            <a href="#!" class="user-address__link  js-toggle"
+                                            toggle-target="#add-new-address">Add a new address</a>
                                         </div> -->
 
                                         <!-- Address cart 1 -->
@@ -493,35 +497,321 @@
                 </div>
             </div>
         </main>
-        <!-- Footer -->
+        <!--  Footer -->
         <footer id="footer" class="footer"></footer>
         <script>
             load("#footer", "./templates/footer.html");
         </script>
 
-        <!-- Dialog / modal -->
-
-        <div id="delete-confirm" class="dialog hide">
-            <div class="dialog__content">
-                <h3 class="dialog__title">Delete</h3>
-                <p class="dialog__text">You are sure you want to delete this product?</p>
-                <p class="dialog__text">you can undo this operation</p>
-                <div class="dialog__btn">
+        <!-- * Modal: confirm remove shopping cart item -->
+        <div id="delete-confirm" class="modal modal--small hide">
+            <!-- <button class="modal__close js-toggle" toggle-target="#delete-confirm">&times;</button> -->
+            <div class="modal__content">
+                <h2 class="modal__title">Delete</h2>
+                <p class="modal__text">You are sure you want to delete this product?</p>
+                <p class="modal__text">you can undo this operation</p>
+                <div class="modal__bottom">
                     <button
-                        class="dialog__btn--cancel btn btn--text js-toggle"
+                        class="modal__bottom--cancel btn btn--text js-toggle"
                         toggle-target="#delete-confirm"
                     >
                         Cancel
                     </button>
                     <button
-                        class="dialog__btn--confirm btn btn--primary js-toggle"
+                        class="modal__bottom--confirm btn btn--primary btn--danger js-toggle"
                         toggle-target="#delete-confirm"
                     >
-                        Confirm
+                        Remove
                     </button>
                 </div>
             </div>
-            <div class="dialog__overlay js-toggle" toggle-target="#delete-confirm"></div>
+            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+        </div>
+
+        <!-- * Modal: add new shipping address -->
+        <div id="add-new-address" class="modal modal--medium hide">
+            <div class="modal__content" style="--content-width: 700px">
+                <form action="" class="form">
+                    <h2 class="modal__title">Add new address</h2>
+
+                    <div class="modal__body">
+                        <form action="" class="form">
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="name" class="form__label form__label--small">Name</label>
+                                    <div
+                                        class="form__text-input form__text-input--small"
+                                        style="margin-top: 0"
+                                    >
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            id="name"
+                                            class="form__input"
+                                            placeholder="Name"
+                                            minlength="2"
+                                            required
+                                        />
+                                        <img
+                                            src="./assets/icon/Form-error.svg"
+                                            alt=""
+                                            class="form__input-icon--error"
+                                        />
+                                    </div>
+                                    <p class="form__error">Name must be at least 2 characters</p>
+                                </div>
+
+                                <div class="form__group" style="margin-top: 0">
+                                    <label for="phone" class="form__label form__label--small">Phone</label>
+                                    <div
+                                        class="form__text-input form__text-input--small"
+                                        style="margin-top: 0"
+                                    >
+                                        <input
+                                            type="tel"
+                                            name="phone"
+                                            id="phone"
+                                            class="form__input"
+                                            placeholder="Phone"
+                                            minlength="10"
+                                            required
+                                        />
+                                        <img
+                                            src="./assets/icon/Form-error.svg"
+                                            alt=""
+                                            class="form__input-icon--error"
+                                        />
+                                    </div>
+                                    <p class="form__error">Phone must be at least 8 characters</p>
+                                </div>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="address" class="form__label form__label--small">Address</label>
+                                <div class="form__text-area">
+                                    <textarea
+                                        name="address"
+                                        id="address"
+                                        class="form__text-area-input"
+                                        placeholder="Address (Area and street)"
+                                        required
+                                    ></textarea>
+                                    <img
+                                        src="./assets/icon/Form-error.svg"
+                                        alt=""
+                                        class="form__input-icon--error"
+                                    />
+                                </div>
+                                <p class="form__error">Address not empty</p>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="city" class="form__label form__label--small"
+                                    >City/District/Town</label
+                                >
+                                <div class="form__text-input form__text-input--small" style="margin-top: 0">
+                                    <input
+                                        type="text"
+                                        name=""
+                                        id="city"
+                                        class="form__input js-toggle"
+                                        readonly
+                                        toggle-target="#form__select-dialog"
+                                        placeholder="City/District/Town"
+                                        required
+                                    />
+                                    <img
+                                        src="./assets/icon/Form-error.svg"
+                                        alt=""
+                                        class="form__input-icon--error"
+                                    />
+
+                                    <div id="form__select-dialog" class="form__select-dialog hide">
+                                        <h2 class="form__dialog-heading d-none d-sm-block">
+                                            City/District/Town
+                                        </h2>
+                                        <button
+                                            class="form__close-dialog d-none d-sm-block js-toggle"
+                                            toggle-target="#form__select-dialog"
+                                        >
+                                            &times;
+                                        </button>
+                                        <div class="form__search">
+                                            <input
+                                                type="text"
+                                                placeholder="Search"
+                                                class="form__search-input"
+                                            />
+                                            <img
+                                                src="./assets/icon/Search.svg"
+                                                alt=""
+                                                class="form__search-icon icon"
+                                            />
+                                        </div>
+                                        <ul class="form__option-list">
+                                            <li class="form__option form__option--current">
+                                                Thành phố Hà Nội
+                                            </li>
+
+                                            <li class="form__option">Tỉnh Hà Giang</li>
+
+                                            <li class="form__option">Tỉnh Cao Bằng</li>
+
+                                            <li class="form__option">Tỉnh Bắc Kạn</li>
+
+                                            <li class="form__option">Tỉnh Tuyên Quang</li>
+
+                                            <li class="form__option">Tỉnh Lào Cai</li>
+
+                                            <li class="form__option">Tỉnh Điện Biên</li>
+
+                                            <li class="form__option">Tỉnh Lai Châu</li>
+
+                                            <li class="form__option">Tỉnh Sơn La</li>
+
+                                            <li class="form__option">Tỉnh Yên Bái</li>
+
+                                            <li class="form__option">Tỉnh Hoà Bình</li>
+
+                                            <li class="form__option">Tỉnh Thái Nguyên</li>
+
+                                            <li class="form__option">Tỉnh Lạng Sơn</li>
+
+                                            <li class="form__option">Tỉnh Quảng Ninh</li>
+
+                                            <li class="form__option">Tỉnh Bắc Giang</li>
+
+                                            <li class="form__option">Tỉnh Phú Thọ</li>
+
+                                            <li class="form__option">Tỉnh Vĩnh Phúc</li>
+
+                                            <li class="form__option">Tỉnh Bắc Ninh</li>
+
+                                            <li class="form__option">Tỉnh Hải Dương</li>
+
+                                            <li class="form__option">Thành phố Hải Phòng</li>
+
+                                            <li class="form__option">Tỉnh Hưng Yên</li>
+
+                                            <li class="form__option">Tỉnh Thái Bình</li>
+
+                                            <li class="form__option">Tỉnh Hà Nam</li>
+
+                                            <li class="form__option">Tỉnh Nam Định</li>
+
+                                            <li class="form__option">Tỉnh Ninh Bình</li>
+
+                                            <li class="form__option">Tỉnh Thanh Hóa</li>
+
+                                            <li class="form__option">Tỉnh Nghệ An</li>
+
+                                            <li class="form__option">Tỉnh Hà Tĩnh</li>
+
+                                            <li class="form__option">Tỉnh Quảng Bình</li>
+
+                                            <li class="form__option">Tỉnh Quảng Trị</li>
+
+                                            <li class="form__option">Tỉnh Thừa Thiên Huế</li>
+
+                                            <li class="form__option">Thành phố Đà Nẵng</li>
+
+                                            <li class="form__option">Tỉnh Quảng Nam</li>
+
+                                            <li class="form__option">Tỉnh Quảng Ngãi</li>
+
+                                            <li class="form__option">Tỉnh Bình Định</li>
+
+                                            <li class="form__option">Tỉnh Phú Yên</li>
+
+                                            <li class="form__option">Tỉnh Khánh Hòa</li>
+
+                                            <li class="form__option">Tỉnh Ninh Thuận</li>
+
+                                            <li class="form__option">Tỉnh Bình Thuận</li>
+
+                                            <li class="form__option">Tỉnh Kon Tum</li>
+
+                                            <li class="form__option">Tỉnh Gia Lai</li>
+
+                                            <li class="form__option">Tỉnh Đắk Lắk</li>
+
+                                            <li class="form__option">Tỉnh Đắk Nông</li>
+
+                                            <li class="form__option">Tỉnh Lâm Đồng</li>
+
+                                            <li class="form__option">Tỉnh Bình Phước</li>
+
+                                            <li class="form__option">Tỉnh Tây Ninh</li>
+
+                                            <li class="form__option">Tỉnh Bình Dương</li>
+
+                                            <li class="form__option">Tỉnh Đồng Nai</li>
+
+                                            <li class="form__option">Tỉnh Bà Rịa - Vũng Tàu</li>
+
+                                            <li class="form__option">Thành phố Hồ Chí Minh</li>
+
+                                            <li class="form__option">Tỉnh Long An</li>
+
+                                            <li class="form__option">Tỉnh Tiền Giang</li>
+
+                                            <li class="form__option">Tỉnh Bến Tre</li>
+
+                                            <li class="form__option">Tỉnh Trà Vinh</li>
+
+                                            <li class="form__option">Tỉnh Vĩnh Long</li>
+
+                                            <li class="form__option">Tỉnh Đồng Tháp</li>
+
+                                            <li class="form__option">Tỉnh An Giang</li>
+
+                                            <li class="form__option">Tỉnh Kiên Giang</li>
+
+                                            <li class="form__option">Thành phố Cần Thơ</li>
+
+                                            <li class="form__option">Tỉnh Hậu Giang</li>
+
+                                            <li class="form__option">Tỉnh Sóc Trăng</li>
+
+                                            <li class="form__option">Tỉnh Bạc Liêu</li>
+
+                                            <li class="form__option">Tỉnh Cà Mau</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form__group form__group-inline">
+                                <label class="form__checkbox"
+                                    ><input
+                                        type="checkbox"
+                                        name=""
+                                        id=""
+                                        class="form__checkbox-input d-none"
+                                    />
+                                    <span class="form__checkbox-label">Set as default address</span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal__bottom">
+                        <button
+                            class="modal__bottom--cancel btn btn--text js-toggle"
+                            toggle-target="#add-new-address"
+                        >
+                            Cancel
+                        </button>
+                        <button
+                            class="modal__bottom--confirm btn btn--primary js-toggle form__submit-btn"
+                            toggle-target="#add-new-address"
+                        >
+                            Create
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal__overlay"></div>
         </div>
     </body>
 </html>

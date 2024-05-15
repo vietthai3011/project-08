@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 // Filter button
 
 .filter-btn {
@@ -49,6 +51,8 @@
     align-items: center;
     justify-content: center;
 
+    cursor: pointer;
+
     white-space: nowrap;
 
     user-select: none;
@@ -90,5 +94,24 @@
 
     &--round {
         border-radius: 50px;
+    }
+
+    &--danger {
+        color: #fff;
+        background-color: #dc3545;
+        opacity: 0.7;
+
+        transition: opacity 0.25s;
+
+        border: 1px solid #dc3545;
+        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+
+        @include abstracts.screen(xl) {
+            opacity: 1;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }
