@@ -469,7 +469,7 @@
                                     <span style="font-weight: 700">$201.65</span>
                                 </div>
 
-                                <a href="#!" class="btn btn--primary btn--round checkout-btn"
+                                <a href="./payment.html" class="btn btn--primary btn--round checkout-btn"
                                     >Continue to checkout</a
                                 >
                             </div>
@@ -535,89 +535,17 @@
                     <h2 class="modal__title">Add new address</h2>
 
                     <div class="modal__body">
-                        <form action="" class="form">
-                            <div class="form__row">
-                                <div class="form__group">
-                                    <label for="name" class="form__label form__label--small">Name</label>
-                                    <div
-                                        class="form__text-input form__text-input--small"
-                                        style="margin-top: 0"
-                                    >
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            id="name"
-                                            class="form__input"
-                                            placeholder="Name"
-                                            minlength="2"
-                                            required
-                                        />
-                                        <img
-                                            src="./assets/icon/Form-error.svg"
-                                            alt=""
-                                            class="form__input-icon--error"
-                                        />
-                                    </div>
-                                    <p class="form__error">Name must be at least 2 characters</p>
-                                </div>
-
-                                <div class="form__group" style="margin-top: 0">
-                                    <label for="phone" class="form__label form__label--small">Phone</label>
-                                    <div
-                                        class="form__text-input form__text-input--small"
-                                        style="margin-top: 0"
-                                    >
-                                        <input
-                                            type="tel"
-                                            name="phone"
-                                            id="phone"
-                                            class="form__input"
-                                            placeholder="Phone"
-                                            minlength="10"
-                                            required
-                                        />
-                                        <img
-                                            src="./assets/icon/Form-error.svg"
-                                            alt=""
-                                            class="form__input-icon--error"
-                                        />
-                                    </div>
-                                    <p class="form__error">Phone must be at least 8 characters</p>
-                                </div>
-                            </div>
-
+                        <div class="form__row">
                             <div class="form__group">
-                                <label for="address" class="form__label form__label--small">Address</label>
-                                <div class="form__text-area">
-                                    <textarea
-                                        name="address"
-                                        id="address"
-                                        class="form__text-area-input"
-                                        placeholder="Address (Area and street)"
-                                        required
-                                    ></textarea>
-                                    <img
-                                        src="./assets/icon/Form-error.svg"
-                                        alt=""
-                                        class="form__input-icon--error"
-                                    />
-                                </div>
-                                <p class="form__error">Address not empty</p>
-                            </div>
-
-                            <div class="form__group">
-                                <label for="city" class="form__label form__label--small"
-                                    >City/District/Town</label
-                                >
+                                <label for="name" class="form__label form__label--small">Name</label>
                                 <div class="form__text-input form__text-input--small" style="margin-top: 0">
                                     <input
                                         type="text"
-                                        name=""
-                                        id="city"
-                                        class="form__input js-toggle"
-                                        readonly
-                                        toggle-target="#form__select-dialog"
-                                        placeholder="City/District/Town"
+                                        name="name"
+                                        id="name"
+                                        class="form__input"
+                                        placeholder="Name"
+                                        minlength="2"
                                         required
                                     />
                                     <img
@@ -625,174 +553,225 @@
                                         alt=""
                                         class="form__input-icon--error"
                                     />
+                                </div>
+                                <p class="form__error">Name must be at least 2 characters</p>
+                            </div>
 
-                                    <div id="form__select-dialog" class="form__select-dialog hide">
-                                        <h2 class="form__dialog-heading d-none d-sm-block">
-                                            City/District/Town
-                                        </h2>
-                                        <button
-                                            class="form__close-dialog d-none d-sm-block js-toggle"
-                                            toggle-target="#form__select-dialog"
-                                        >
-                                            &times;
-                                        </button>
-                                        <div class="form__search">
-                                            <input
-                                                type="text"
-                                                placeholder="Search"
-                                                class="form__search-input"
-                                            />
-                                            <img
-                                                src="./assets/icon/Search.svg"
-                                                alt=""
-                                                class="form__search-icon icon"
-                                            />
-                                        </div>
-                                        <ul class="form__option-list">
-                                            <li class="form__option form__option--current">
-                                                Thành phố Hà Nội
-                                            </li>
+                            <div class="form__group" style="margin-top: 0">
+                                <label for="phone" class="form__label form__label--small">Phone</label>
+                                <div class="form__text-input form__text-input--small" style="margin-top: 0">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        id="phone"
+                                        class="form__input"
+                                        placeholder="Phone"
+                                        minlength="10"
+                                        required
+                                    />
+                                    <img
+                                        src="./assets/icon/Form-error.svg"
+                                        alt=""
+                                        class="form__input-icon--error"
+                                    />
+                                </div>
+                                <p class="form__error">Phone must be at least 8 characters</p>
+                            </div>
+                        </div>
 
-                                            <li class="form__option">Tỉnh Hà Giang</li>
+                        <div class="form__group">
+                            <label for="address" class="form__label form__label--small">Address</label>
+                            <div class="form__text-area">
+                                <textarea
+                                    name="address"
+                                    id="address"
+                                    class="form__text-area-input"
+                                    placeholder="Address (Area and street)"
+                                    required
+                                ></textarea>
+                                <img
+                                    src="./assets/icon/Form-error.svg"
+                                    alt=""
+                                    class="form__input-icon--error"
+                                />
+                            </div>
+                            <p class="form__error">Address not empty</p>
+                        </div>
 
-                                            <li class="form__option">Tỉnh Cao Bằng</li>
+                        <div class="form__group">
+                            <label for="city" class="form__label form__label--small"
+                                >City/District/Town</label
+                            >
+                            <div class="form__text-input form__text-input--small" style="margin-top: 0">
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="city"
+                                    class="form__input js-toggle"
+                                    readonly
+                                    toggle-target="#form__select-dialog"
+                                    placeholder="City/District/Town"
+                                    required
+                                />
+                                <img
+                                    src="./assets/icon/Form-error.svg"
+                                    alt=""
+                                    class="form__input-icon--error"
+                                />
 
-                                            <li class="form__option">Tỉnh Bắc Kạn</li>
-
-                                            <li class="form__option">Tỉnh Tuyên Quang</li>
-
-                                            <li class="form__option">Tỉnh Lào Cai</li>
-
-                                            <li class="form__option">Tỉnh Điện Biên</li>
-
-                                            <li class="form__option">Tỉnh Lai Châu</li>
-
-                                            <li class="form__option">Tỉnh Sơn La</li>
-
-                                            <li class="form__option">Tỉnh Yên Bái</li>
-
-                                            <li class="form__option">Tỉnh Hoà Bình</li>
-
-                                            <li class="form__option">Tỉnh Thái Nguyên</li>
-
-                                            <li class="form__option">Tỉnh Lạng Sơn</li>
-
-                                            <li class="form__option">Tỉnh Quảng Ninh</li>
-
-                                            <li class="form__option">Tỉnh Bắc Giang</li>
-
-                                            <li class="form__option">Tỉnh Phú Thọ</li>
-
-                                            <li class="form__option">Tỉnh Vĩnh Phúc</li>
-
-                                            <li class="form__option">Tỉnh Bắc Ninh</li>
-
-                                            <li class="form__option">Tỉnh Hải Dương</li>
-
-                                            <li class="form__option">Thành phố Hải Phòng</li>
-
-                                            <li class="form__option">Tỉnh Hưng Yên</li>
-
-                                            <li class="form__option">Tỉnh Thái Bình</li>
-
-                                            <li class="form__option">Tỉnh Hà Nam</li>
-
-                                            <li class="form__option">Tỉnh Nam Định</li>
-
-                                            <li class="form__option">Tỉnh Ninh Bình</li>
-
-                                            <li class="form__option">Tỉnh Thanh Hóa</li>
-
-                                            <li class="form__option">Tỉnh Nghệ An</li>
-
-                                            <li class="form__option">Tỉnh Hà Tĩnh</li>
-
-                                            <li class="form__option">Tỉnh Quảng Bình</li>
-
-                                            <li class="form__option">Tỉnh Quảng Trị</li>
-
-                                            <li class="form__option">Tỉnh Thừa Thiên Huế</li>
-
-                                            <li class="form__option">Thành phố Đà Nẵng</li>
-
-                                            <li class="form__option">Tỉnh Quảng Nam</li>
-
-                                            <li class="form__option">Tỉnh Quảng Ngãi</li>
-
-                                            <li class="form__option">Tỉnh Bình Định</li>
-
-                                            <li class="form__option">Tỉnh Phú Yên</li>
-
-                                            <li class="form__option">Tỉnh Khánh Hòa</li>
-
-                                            <li class="form__option">Tỉnh Ninh Thuận</li>
-
-                                            <li class="form__option">Tỉnh Bình Thuận</li>
-
-                                            <li class="form__option">Tỉnh Kon Tum</li>
-
-                                            <li class="form__option">Tỉnh Gia Lai</li>
-
-                                            <li class="form__option">Tỉnh Đắk Lắk</li>
-
-                                            <li class="form__option">Tỉnh Đắk Nông</li>
-
-                                            <li class="form__option">Tỉnh Lâm Đồng</li>
-
-                                            <li class="form__option">Tỉnh Bình Phước</li>
-
-                                            <li class="form__option">Tỉnh Tây Ninh</li>
-
-                                            <li class="form__option">Tỉnh Bình Dương</li>
-
-                                            <li class="form__option">Tỉnh Đồng Nai</li>
-
-                                            <li class="form__option">Tỉnh Bà Rịa - Vũng Tàu</li>
-
-                                            <li class="form__option">Thành phố Hồ Chí Minh</li>
-
-                                            <li class="form__option">Tỉnh Long An</li>
-
-                                            <li class="form__option">Tỉnh Tiền Giang</li>
-
-                                            <li class="form__option">Tỉnh Bến Tre</li>
-
-                                            <li class="form__option">Tỉnh Trà Vinh</li>
-
-                                            <li class="form__option">Tỉnh Vĩnh Long</li>
-
-                                            <li class="form__option">Tỉnh Đồng Tháp</li>
-
-                                            <li class="form__option">Tỉnh An Giang</li>
-
-                                            <li class="form__option">Tỉnh Kiên Giang</li>
-
-                                            <li class="form__option">Thành phố Cần Thơ</li>
-
-                                            <li class="form__option">Tỉnh Hậu Giang</li>
-
-                                            <li class="form__option">Tỉnh Sóc Trăng</li>
-
-                                            <li class="form__option">Tỉnh Bạc Liêu</li>
-
-                                            <li class="form__option">Tỉnh Cà Mau</li>
-                                        </ul>
+                                <div id="form__select-dialog" class="form__select-dialog hide">
+                                    <h2 class="form__dialog-heading d-none d-sm-block">City/District/Town</h2>
+                                    <button
+                                        class="form__close-dialog d-none d-sm-block js-toggle"
+                                        toggle-target="#form__select-dialog"
+                                    >
+                                        &times;
+                                    </button>
+                                    <div class="form__search">
+                                        <input type="text" placeholder="Search" class="form__search-input" />
+                                        <img
+                                            src="./assets/icon/Search.svg"
+                                            alt=""
+                                            class="form__search-icon icon"
+                                        />
                                     </div>
+                                    <ul class="form__option-list">
+                                        <li class="form__option form__option--current">Thành phố Hà Nội</li>
+
+                                        <li class="form__option">Tỉnh Hà Giang</li>
+
+                                        <li class="form__option">Tỉnh Cao Bằng</li>
+
+                                        <li class="form__option">Tỉnh Bắc Kạn</li>
+
+                                        <li class="form__option">Tỉnh Tuyên Quang</li>
+
+                                        <li class="form__option">Tỉnh Lào Cai</li>
+
+                                        <li class="form__option">Tỉnh Điện Biên</li>
+
+                                        <li class="form__option">Tỉnh Lai Châu</li>
+
+                                        <li class="form__option">Tỉnh Sơn La</li>
+
+                                        <li class="form__option">Tỉnh Yên Bái</li>
+
+                                        <li class="form__option">Tỉnh Hoà Bình</li>
+
+                                        <li class="form__option">Tỉnh Thái Nguyên</li>
+
+                                        <li class="form__option">Tỉnh Lạng Sơn</li>
+
+                                        <li class="form__option">Tỉnh Quảng Ninh</li>
+
+                                        <li class="form__option">Tỉnh Bắc Giang</li>
+
+                                        <li class="form__option">Tỉnh Phú Thọ</li>
+
+                                        <li class="form__option">Tỉnh Vĩnh Phúc</li>
+
+                                        <li class="form__option">Tỉnh Bắc Ninh</li>
+
+                                        <li class="form__option">Tỉnh Hải Dương</li>
+
+                                        <li class="form__option">Thành phố Hải Phòng</li>
+
+                                        <li class="form__option">Tỉnh Hưng Yên</li>
+
+                                        <li class="form__option">Tỉnh Thái Bình</li>
+
+                                        <li class="form__option">Tỉnh Hà Nam</li>
+
+                                        <li class="form__option">Tỉnh Nam Định</li>
+
+                                        <li class="form__option">Tỉnh Ninh Bình</li>
+
+                                        <li class="form__option">Tỉnh Thanh Hóa</li>
+
+                                        <li class="form__option">Tỉnh Nghệ An</li>
+
+                                        <li class="form__option">Tỉnh Hà Tĩnh</li>
+
+                                        <li class="form__option">Tỉnh Quảng Bình</li>
+
+                                        <li class="form__option">Tỉnh Quảng Trị</li>
+
+                                        <li class="form__option">Tỉnh Thừa Thiên Huế</li>
+
+                                        <li class="form__option">Thành phố Đà Nẵng</li>
+
+                                        <li class="form__option">Tỉnh Quảng Nam</li>
+
+                                        <li class="form__option">Tỉnh Quảng Ngãi</li>
+
+                                        <li class="form__option">Tỉnh Bình Định</li>
+
+                                        <li class="form__option">Tỉnh Phú Yên</li>
+
+                                        <li class="form__option">Tỉnh Khánh Hòa</li>
+
+                                        <li class="form__option">Tỉnh Ninh Thuận</li>
+
+                                        <li class="form__option">Tỉnh Bình Thuận</li>
+
+                                        <li class="form__option">Tỉnh Kon Tum</li>
+
+                                        <li class="form__option">Tỉnh Gia Lai</li>
+
+                                        <li class="form__option">Tỉnh Đắk Lắk</li>
+
+                                        <li class="form__option">Tỉnh Đắk Nông</li>
+
+                                        <li class="form__option">Tỉnh Lâm Đồng</li>
+
+                                        <li class="form__option">Tỉnh Bình Phước</li>
+
+                                        <li class="form__option">Tỉnh Tây Ninh</li>
+
+                                        <li class="form__option">Tỉnh Bình Dương</li>
+
+                                        <li class="form__option">Tỉnh Đồng Nai</li>
+
+                                        <li class="form__option">Tỉnh Bà Rịa - Vũng Tàu</li>
+
+                                        <li class="form__option">Thành phố Hồ Chí Minh</li>
+
+                                        <li class="form__option">Tỉnh Long An</li>
+
+                                        <li class="form__option">Tỉnh Tiền Giang</li>
+
+                                        <li class="form__option">Tỉnh Bến Tre</li>
+
+                                        <li class="form__option">Tỉnh Trà Vinh</li>
+
+                                        <li class="form__option">Tỉnh Vĩnh Long</li>
+
+                                        <li class="form__option">Tỉnh Đồng Tháp</li>
+
+                                        <li class="form__option">Tỉnh An Giang</li>
+
+                                        <li class="form__option">Tỉnh Kiên Giang</li>
+
+                                        <li class="form__option">Thành phố Cần Thơ</li>
+
+                                        <li class="form__option">Tỉnh Hậu Giang</li>
+
+                                        <li class="form__option">Tỉnh Sóc Trăng</li>
+
+                                        <li class="form__option">Tỉnh Bạc Liêu</li>
+
+                                        <li class="form__option">Tỉnh Cà Mau</li>
+                                    </ul>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="form__group form__group-inline">
-                                <label class="form__checkbox"
-                                    ><input
-                                        type="checkbox"
-                                        name=""
-                                        id=""
-                                        class="form__checkbox-input d-none"
-                                    />
-                                    <span class="form__checkbox-label">Set as default address</span>
-                                </label>
-                            </div>
-                        </form>
+                        <div class="form__group form__group-inline">
+                            <label class="form__checkbox"
+                                ><input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
+                                <span class="form__checkbox-label">Set as default address</span>
+                            </label>
+                        </div>
                     </div>
 
                     <div class="modal__bottom">

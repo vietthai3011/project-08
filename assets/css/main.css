@@ -4105,6 +4105,10 @@ html {
   }
 }
 
+.cart-info__list {
+  margin-top: 30px;
+}
+
 .cart-info {
   padding: 30px;
   color: var(--checkout-primary-color);
@@ -4171,7 +4175,6 @@ html {
   line-height: 3.4rem; /* 141.667% */
 }
 .cart-info__sub-heading {
-  margin: 30px 0;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 2.6rem; /* 144.444% */
