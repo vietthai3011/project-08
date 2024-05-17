@@ -129,4 +129,21 @@ html.dark {
     --dialog-content-bg: #171c28;
     --dialog-content-shadow: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
     --dialog-select-border: #292e39;
+
+    // Payment
+    --payment-bg: #292e39;
+    --payment-shadow: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
+    --payment-price-color-checked: #fff;
+
+    // Profile
+    --profile-bg: #171c28;
+    --profile-shadow: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
+    --profile-user-shadow: none;
+    --profile-link-bg-hover: #3d4149;
+
+    // Account info
+    --account-info-bg: #292e39;
+    --account-icon-bg: #171c28;
+
+    --favorite-separate-bg: #292e39;
 }

@@ -1,0 +1,32 @@
+.account-info {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--account-info-bg);
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 15px;
+        border-radius: 8px;
+        background-color: var(--account-icon-bg);
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2.2rem; /* 146.667% */
+    }
+
+    &__desc {
+        font-size: 1.4rem;
+        line-height: 2rem; /* 142.857% */
+
+        margin-top: 6px;
+    }
+}

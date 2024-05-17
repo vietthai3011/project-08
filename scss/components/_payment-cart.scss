@@ -1,0 +1,117 @@
+.payment-cart {
+    position: relative;
+    z-index: 1;
+
+    // height: 100%;
+    color: #fff;
+    border-radius: 10px;
+    background-color: var(--payment-cart-bg);
+    padding: 20px;
+
+    overflow: hidden;
+    user-select: none;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        pointer-events: none;
+    }
+
+    &__top {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+
+        margin-bottom: 37px;
+    }
+
+    &__type {
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 2rem; /* 142.857% */
+    }
+
+    &__number {
+        position: relative;
+
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.6rem; /* 144.444% */
+
+        margin-bottom: 20px;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__expired {
+        position: relative;
+        z-index: 1;
+        margin-left: 40px;
+    }
+
+    &__label {
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 1.4rem; /* 175% */
+    }
+
+    &__value {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.4rem; /* 140% */
+    }
+
+    &__circle {
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+        z-index: 1;
+
+        margin-left: auto;
+
+        width: 20px;
+        height: 20px;
+
+        background-color: rgba($color: red, $alpha: 0.8);
+        border-radius: 50%;
+
+        mix-blend-mode: lighten;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 50%;
+
+            width: 20px;
+            height: 20px;
+            background-color: rgba($color: orange, $alpha: 0.8);
+            border-radius: 50%;
+        }
+    }
+}
+
+.new-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 14px;
+
+    padding: 56px 90px;
+    border: 1px dashed #d2d1d6;
+    border-radius: 10px;
+
+    &__text {
+        white-space: nowrap;
+    }
+}

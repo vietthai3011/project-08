@@ -1,0 +1,30 @@
+@use "../abstracts";
+
+.form-card {
+    &__label {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+
+        @include abstracts.screen(sm) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: flex-end;
+
+        margin-top: 30px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.4rem; /* 150% */
+    }
+
+    &__btn {
+        padding: 10px 20px;
+
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.4rem; /* 150% */
+    }
+}

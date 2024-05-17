@@ -10,6 +10,7 @@ $error-color: #ed1337;
 
     &__row {
         display: flex;
+        flex-wrap: nowrap;
         column-gap: 30px;
 
         @include abstracts.screen(sm) {
@@ -23,17 +24,7 @@ $error-color: #ed1337;
     }
 
     &__group {
-        & + & {
-            margin-top: 20px;
-        }
-
-        &:nth-child(2) {
-            margin-top: 30px;
-
-            @include abstracts.screen(md) {
-                margin-top: 20px;
-            }
-        }
+        margin-top: 30px;
 
         &-inline {
             display: flex;
@@ -108,14 +99,6 @@ $error-color: #ed1337;
     }
 
     &__text-input {
-        &:nth-child(2) {
-            margin-top: 30px;
-        }
-
-        &:nth-child(3) {
-            margin-top: 20px;
-        }
-
         position: relative;
     }
 

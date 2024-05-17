@@ -44,18 +44,20 @@
         <main class="checkout-page">
             <div class="container">
                 <!-- Search -->
-                <div class="search-bar d-none d-md-flex">
-                    <input type="text" class="search-bar__input" placeholder="Search for item" />
-                    <button class="search-bar__submit">
-                        <img src="./assets/icon/Search.svg" alt="" class="search-bar__icon icon" />
-                    </button>
+                <div class="checkout-container">
+                    <div class="search-bar d-none d-md-flex">
+                        <input type="text" class="search-bar__input" placeholder="Search for item" />
+                        <button class="search-bar__submit">
+                            <img src="./assets/icon/Search.svg" alt="" class="search-bar__icon icon" />
+                        </button>
+                    </div>
                 </div>
 
                 <div class="checkout-container">
                     <!-- Breadcrumbs  -->
                     <ul class="breadcrumbs checkout-page__breadcrumbs">
                         <li class="breadcrumbs__item">
-                            <a href="#!" class="breadcrumbs__link">
+                            <a href="./index-logined.html" class="breadcrumbs__link">
                                 Home
                                 <img src="./assets/icon/Arrow - right.svg" alt="" class="breadcrumbs__icon"
                             /></a>
@@ -118,11 +120,11 @@
                                         <article class="address-cart">
                                             <div class="address-cart__content">
                                                 <div class="address-cart__choose">
-                                                    <label class="address-cart__checkbox">
+                                                    <label for="delivery" class="cart-info__checkbox">
                                                         <input
-                                                            type="checkbox"
-                                                            name=""
-                                                            class="address-cart__checkbox-input"
+                                                            type="radio"
+                                                            name="delivery"
+                                                            class="cart-info__checkbox-input"
                                                         />
                                                     </label>
                                                 </div>
@@ -141,7 +143,10 @@
                                                 </div>
                                             </div>
                                             <div class="address-cart__edit">
-                                                <button class="address-cart__btn">
+                                                <button
+                                                    class="cart-info__edit-btn js-toggle"
+                                                    toggle-target="#add-new-address"
+                                                >
                                                     <img
                                                         src="./assets/icon/edit.svg"
                                                         alt=""
@@ -156,11 +161,11 @@
                                         <article class="address-cart">
                                             <div class="address-cart__content">
                                                 <div class="address-cart__choose">
-                                                    <label class="address-cart__checkbox">
+                                                    <label for="delivery" class="cart-info__checkbox">
                                                         <input
-                                                            type="checkbox"
-                                                            name=""
-                                                            class="address-cart__checkbox-input"
+                                                            type="radio"
+                                                            name="delivery"
+                                                            class="cart-info__checkbox-input"
                                                         />
                                                     </label>
                                                 </div>
@@ -180,7 +185,10 @@
                                                 </div>
                                             </div>
                                             <div class="address-cart__edit">
-                                                <button class="address-cart__btn">
+                                                <button
+                                                    class="cart-info__edit-btn js-toggle"
+                                                    toggle-target="#add-new-address"
+                                                >
                                                     <img
                                                         src="./assets/icon/edit.svg"
                                                         alt=""
@@ -195,7 +203,10 @@
 
                                 <div class="checkout__separate checkout__separate--shipping"></div>
 
-                                <h2 class="cart-info__sub-heading">Items details</h2>
+                                <div class="center-space-beetween">
+                                    <h2 class="cart-info__sub-heading">Items details</h2>
+                                    <a href="./favorite.html" class="act-dropdown__view-all">See all</a>
+                                </div>
 
                                 <div class="cart-info__list">
                                     <!-- cart item 1 -->

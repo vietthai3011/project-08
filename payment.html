@@ -44,18 +44,20 @@
         <main class="checkout-page">
             <div class="container">
                 <!-- Search -->
-                <div class="search-bar d-none d-md-flex">
-                    <input type="text" class="search-bar__input" placeholder="Search for item" />
-                    <button class="search-bar__submit">
-                        <img src="./assets/icon/Search.svg" alt="" class="search-bar__icon icon" />
-                    </button>
+                <div class="checkout-container">
+                    <div class="search-bar d-none d-md-flex">
+                        <input type="text" class="search-bar__input" placeholder="Search for item" />
+                        <button class="search-bar__submit">
+                            <img src="./assets/icon/Search.svg" alt="" class="search-bar__icon icon" />
+                        </button>
+                    </div>
                 </div>
 
                 <div class="checkout-container">
                     <!-- Breadcrumbs  -->
                     <ul class="breadcrumbs checkout-page__breadcrumbs">
                         <li class="breadcrumbs__item">
-                            <a href="#!" class="breadcrumbs__link">
+                            <a href="./index-logined.html" class="breadcrumbs__link">
                                 Home
                                 <img src="./assets/icon/Arrow - right.svg" alt="" class="breadcrumbs__icon"
                             /></a>
@@ -84,22 +86,219 @@
                 <!-- Checkout content -->
                 <div class="checkout-container">
                     <div class="row gy-xl-3">
-                        <div class="col-8 col-xl-12">
+                        <div class="col-8 col-xl-7 col-lg-12">
+                            <!-- * Cart info 1 -->
                             <div class="cart-info">
-                                <h2 class="cart-info__sub-heading">
-                                    1. Shipping, arrives between Mon, May 16—Tue, May 24
-                                </h2>
+                                <div class="cart-info__top">
+                                    <h2 class="cart-info__heading--lv2">
+                                        1. Shipping, arrives between Mon, May 16—Tue, May 24
+                                    </h2>
+
+                                    <a class="cart-info__edit-btn" href="./shipping.html">
+                                        <img
+                                            src="./assets/icon/edit.svg"
+                                            alt=""
+                                            class="address-cart__img icon"
+                                        />
+                                        Edit
+                                    </a>
+                                </div>
+
+                                <article class="payment-item">
+                                    <div class="payment-item__block">
+                                        <h3 class="payment-item__title">Imran Khan</h3>
+                                        <p class="payment-item__desc">
+                                            Museum of Rajas, Sylhet Sadar, Sylhet 3100.
+                                        </p>
+                                    </div>
+                                </article>
+
+                                <article class="payment-item">
+                                    <div class="payment-item__block">
+                                        <h3 class="payment-item__title">Items details</h3>
+                                        <p class="payment-item__desc">2 items</p>
+                                    </div>
+                                    <a href="./shipping.html" class="payment-item__view">View details</a>
+                                </article>
                             </div>
 
+                            <!-- * Cart info 2   -->
                             <div class="cart-info">
-                                <h2 class="cart-info__sub-heading">2. Shipping method</h2>
+                                <h2 class="cart-info__heading">2. Shipping method</h2>
 
                                 <div class="checkout__separate checkout__separate--shipping"></div>
+
+                                <h3 class="cart-info__sub-heading">Availeble Shipping method</h3>
+
+                                <label>
+                                    <article class="payment-item payment-item--pointer">
+                                        <div class="payment-item__left">
+                                            <img
+                                                src="./assets/img/payment/grab-logo.png"
+                                                alt=""
+                                                class="payment-item__thumb"
+                                            />
+                                        </div>
+
+                                        <div class="payment-item__right">
+                                            <div class="payment-item__block">
+                                                <h3 class="payment-item__title">Fedex Delivery</h3>
+                                                <p class="payment-item__desc payment-item__desc--blur">
+                                                    Delivery: 2-3 days work
+                                                </p>
+                                            </div>
+                                            <div class="payment-item__cod-wrap">
+                                                <span class="payment-item__price">Free</span>
+                                                <span for="delivery" class="cart-info__checkbox">
+                                                    <input
+                                                        type="radio"
+                                                        name="delivery"
+                                                        class="cart-info__checkbox-input"
+                                                    />
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </label>
+
+                                <label>
+                                    <article class="payment-item payment-item--pointer">
+                                        <div class="payment-item__left">
+                                            <img
+                                                src="./assets/img/payment/ninjavan.png"
+                                                alt=""
+                                                class="payment-item__thumb"
+                                            />
+                                        </div>
+
+                                        <div class="payment-item__right">
+                                            <div class="payment-item__block">
+                                                <h3 class="payment-item__title">DHL Delivery</h3>
+                                                <p class="payment-item__ desc payment-item__desc--blur">
+                                                    Delivery: 2-3 days work
+                                                </p>
+                                            </div>
+                                            <div class="payment-item__cod-wrap">
+                                                <span class="payment-item__price">$12.00</span>
+
+                                                <span for="delivery" class="cart-info__checkbox">
+                                                    <input
+                                                        type="radio"
+                                                        name="delivery"
+                                                        class="cart-info__checkbox-input"
+                                                    />
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </label>
                             </div>
                         </div>
-                        <div class="col-4 col-xl-12">
+                        <div class="col-4 col-xl-5 col-lg-12">
                             <div class="cart-info">
                                 <h2 class="cart-info__sub-heading">2. Shipping method</h2>
+
+                                <p class="cart-info__desc">
+                                    Complete your purchase item by providing your payment details order.
+                                </p>
+
+                                <form action="" class="form cart-info__form">
+                                    <div class="form__group">
+                                        <label for="email" class="form__label">Email Address</label>
+                                        <div class="form__text-input cart-info__text-input">
+                                            <input
+                                                type="email"
+                                                name=""
+                                                id="email"
+                                                class="form__input"
+                                                placeholder="example@gmail.com"
+                                                required
+                                            />
+                                            <img
+                                                src="./assets/icon/Form-error.svg"
+                                                alt=""
+                                                class="form__input-icon--error"
+                                            />
+                                        </div>
+                                        <p class="form__error">Email is not in correct format</p>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <label for="card-holder" class="form__label">Card Holder</label>
+                                        <div class="form__text-input cart-info__text-input">
+                                            <input
+                                                type="email"
+                                                name="card-holder"
+                                                id="card-holder"
+                                                class="form__input"
+                                                placeholder="example@gmail.com"
+                                                required
+                                            />
+                                            <img
+                                                src="./assets/icon/Form-error.svg"
+                                                alt=""
+                                                class="form__input-icon--error"
+                                            />
+                                        </div>
+                                        <p class="form__error">Email is not in correct format</p>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <label for="card-details" class="form__label">Card Details</label>
+                                        <div class="form__text-input cart-info__text-input">
+                                            <input
+                                                type="email"
+                                                name="card-details"
+                                                id="card-details"
+                                                class="form__input"
+                                                placeholder="example@gmail.com"
+                                                required
+                                            />
+                                            <img
+                                                src="./assets/icon/Form-error.svg"
+                                                alt=""
+                                                class="form__input-icon--error"
+                                            />
+                                        </div>
+                                        <p class="form__error">Email is not in correct format</p>
+                                    </div>
+
+                                    <div class="form__row cart-info__form-row" style="margin-top: 30px">
+                                        <div class="form__group" style="margin-top: 0">
+                                            <div class="form__text-input cart-info__text-input--lv2">
+                                                <input
+                                                    type="email"
+                                                    name="card-expired"
+                                                    id="card-expired"
+                                                    class="form__input"
+                                                    placeholder="MM/YY"
+                                                    required
+                                                />
+                                            </div>
+                                            <p class="form__error">Email is not in correct format</p>
+                                        </div>
+
+                                        <div class="form__group" style="margin-top: 0">
+                                            <div class="form__text-input cart-info__text-input--lv2">
+                                                <input
+                                                    type="email"
+                                                    name="card-cvc"
+                                                    id="card-cvc"
+                                                    class="form__input cart-info__form-input cart-info__form-input--border"
+                                                    placeholder="CVC"
+                                                    required
+                                                />
+                                                <img
+                                                    src="./assets/icon/Form-error.svg"
+                                                    alt=""
+                                                    class="form__input-icon--error"
+                                                />
+                                            </div>
+                                            <p class="form__error">Email is not in correct format</p>
+                                        </div>
+                                    </div>
+                                </form>
+
                                 <div class="cart-info__row" style="font-size: 1.6rem; line-height: 2.4rem">
                                     <span>Subtotal <span class="cart-info__sub-label">(items)</span></span>
                                     <span style="font-weight: 700">3</span>
@@ -122,8 +321,8 @@
                                     <span style="font-weight: 700">$201.65</span>
                                 </div>
 
-                                <a href="#!" class="btn btn--primary btn--round checkout-btn"
-                                    >Continue to checkout</a
+                                <a href="./profile.html" class="btn btn--primary btn--round checkout-btn"
+                                    >Pay $465.98</a
                                 >
                             </div>
                         </div>
